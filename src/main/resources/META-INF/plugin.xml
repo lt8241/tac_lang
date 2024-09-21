@@ -1,18 +1,12 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.lt8241.taclang</id>
-    <name>tac_lang</name>
-    <vendor>lt8241</vendor>
+    <id>cn.tao.taclang</id>
+    <name>Tac</name>
+    <vendor>m1ndset</vendor>
 
     <depends>com.intellij.modules.platform</depends>
-
-    <resource-bundle>messages.MyBundle</resource-bundle>
-
+    <!--<resource-bundle>messages.MyBundle</resource-bundle>-->
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.lt8241.taclang.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <fileType name="Tac文件" implementationClass="cn.tao.lang.tac.TacFileType" fieldName="INSTANCE" language="Tac" extensions="tac"/>
     </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.lt8241.taclang.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
-    </applicationListeners>
 </idea-plugin>
