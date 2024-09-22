@@ -9,4 +9,7 @@
     <extensions defaultExtensionNs="com.intellij">
         <fileType name="Tac文件" implementationClass="cn.tao.lang.tac.TacFileType" fieldName="INSTANCE" language="Tac" extensions="tac"/>
     </extensions>
+    <extensions defaultExtensionNs="com.intellij">
+        <lang.parserDefinition language="Tac" implementationClass="cn.tao.lang.tac.TacParserDefinition"/>
+    </extensions>
 </idea-plugin>
