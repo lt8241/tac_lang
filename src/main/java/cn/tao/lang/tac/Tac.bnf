@@ -1,0 +1,16 @@
+{
+    parserClass="cn.tao.lang.tac.parser.TacParser"
+    extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+    psiClassPrefix="Tac"
+    psiImplClassSuffix="Impl"
+    psiPackage="cn.tao.lang.tac.psi"
+    psiImplPackage="cn.tao.lang.tac.psi.impl"
+    elementTypeHolderClass="cn.tao.lang.tac.psi.TacTypes"
+    elementTypeClass="cn.tao.lang.tac.psi.TacElementType"
+    tokenTypeClass="cn.tao.lang.tac.psi.TacTokenType"
+}
+simpleFile ::= item_*
+
+private item_ ::= (property|COMMENT|CRLF)
+
+property ::= (KEY? SEPARATOR VALUE?) | KEY
