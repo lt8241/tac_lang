@@ -32,7 +32,7 @@ public class TacParser implements PsiParser, LightPsiParser {
   }
 
   static boolean parse_root_(IElementType t, PsiBuilder b, int l) {
-    return simpleFile(b, l + 1);
+    return tacFile(b, l + 1);
   }
 
   /* ********************************************************** */
@@ -87,12 +87,12 @@ public class TacParser implements PsiParser, LightPsiParser {
 
   /* ********************************************************** */
   // item_*
-  static boolean simpleFile(PsiBuilder b, int l) {
-    if (!recursion_guard_(b, l, "simpleFile")) return false;
+  static boolean tacFile(PsiBuilder b, int l) {
+    if (!recursion_guard_(b, l, "tacFile")) return false;
     while (true) {
       int c = current_position_(b);
       if (!item_(b, l + 1)) break;
-      if (!empty_element_parsed_guard_(b, "simpleFile", c)) break;
+      if (!empty_element_parsed_guard_(b, "tacFile", c)) break;
     }
     return true;
   }

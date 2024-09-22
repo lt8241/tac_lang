@@ -8,9 +8,13 @@
     elementTypeHolderClass="cn.tao.lang.tac.psi.TacTypes"
     elementTypeClass="cn.tao.lang.tac.psi.TacElementType"
     tokenTypeClass="cn.tao.lang.tac.psi.TacTokenType"
+    psiImplUtilClass="cn.tao.lang.psi.impl.TacPsiImplUtils"
 }
-simpleFile ::= item_*
+tacFile ::= item_*
 
 private item_ ::= (property|COMMENT|CRLF)
 
 property ::= (KEY? SEPARATOR VALUE?) | KEY
+{
+    methods = [getKey getValue]
+}
