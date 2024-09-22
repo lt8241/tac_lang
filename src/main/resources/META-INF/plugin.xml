@@ -12,4 +12,10 @@
     <extensions defaultExtensionNs="com.intellij">
         <lang.parserDefinition language="Tac" implementationClass="cn.tao.lang.tac.TacParserDefinition"/>
     </extensions>
+    <extensions defaultExtensionNs="com.intellij">
+        <lang.syntaxHighlighterFactory language="Tac" implementationClass="cn.tao.lang.tac.TacSyntaxHighlighterFactory"/>
+    </extensions>
+    <extensions defaultExtensionNs="com.intellij">
+        <colorSettingsPage implementation="cn.tao.lang.tac.TacColorSettingsPage"/>
+    </extensions>
 </idea-plugin>
